@@ -26,7 +26,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <BitcoinCanvas />
+      <BitcoinCanvas className="md:hidden sm:hidden" />
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">

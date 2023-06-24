@@ -20,7 +20,7 @@ const Bitcoin = ({ isMobile }) => {
       />
       <primitive
         object={bitcoin.scene}
-        scale={isMobile ? 0.4 : 0.4}
+        scale={isMobile ? 0.25 : 0.4}
         position={isMobile ? [-0.5, -2.1, -1.5] : [-1, -2.1, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
@@ -32,7 +32,7 @@ const BitcoinCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    const mediaQuery = window.matchMedia("(max-width: 390px)");
     const mediaQuery1 = window.matchMedia("(max-width: 1100px)");
 
     setIsMobile(mediaQuery.matches);
