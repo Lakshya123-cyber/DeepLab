@@ -1,4 +1,5 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import BlogPost from "./components/BlogPost";
 import {
   About,
   Contact,
@@ -20,6 +21,9 @@ const App = () => {
         <About />
         <Experience />
         <Works />
+        <Routes>
+          <Route path="/blog" element={<BlogPost />} exact />
+        </Routes>
         <Feedbacks />
         <div className="relative z-0">
           <Contact />

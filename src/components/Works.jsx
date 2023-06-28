@@ -5,6 +5,7 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { medium } from "../assets";
+import { Link } from "react-router-dom";
 
 const ProjectCard = ({ index, name, description, tags, image }) => {
   return (
@@ -22,7 +23,12 @@ const ProjectCard = ({ index, name, description, tags, image }) => {
 
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
-              onClick={() => {}}
+              onClick={() =>
+                window.open(
+                  "https://medium.com/simply-technology/deconstructed-tech-consulting-3e7ec2397965",
+                  "_blank"
+                )
+              }
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
               <img
@@ -35,7 +41,9 @@ const ProjectCard = ({ index, name, description, tags, image }) => {
         </div>
 
         <div className="mt-5">
-          <h3 className="text-black font-bold text-[24px]">{name}</h3>
+          <Link to="/blog" className="text-black font-bold text-[24px]">
+            {name}
+          </Link>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
